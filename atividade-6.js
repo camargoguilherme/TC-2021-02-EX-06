@@ -52,3 +52,16 @@ function filterEmployeeWithCategoryManager(employee) {
 const filtedEmployee = funcionarios.filter(filterEmployeeWithCategoryManager);
 console.log("filtedEmployee", filtedEmployee);
 console.log("===============================================================");
+
+function reduceEmployeeWithSmallerId(acc, employee) {
+  if (acc.id > employee.id) {
+    acc = employee;
+  }
+  return acc;
+}
+
+const reducedEmployee = funcionarios.reduce(reduceEmployeeWithSmallerId, {
+  id: Number.POSITIVE_INFINITY,
+});
+console.log("reducedEmployee", reducedEmployee);
+console.log("===============================================================");
