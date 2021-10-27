@@ -65,3 +65,12 @@ const reducedEmployee = funcionarios.reduce(reduceEmployeeWithSmallerId, {
 });
 console.log("reducedEmployee", reducedEmployee);
 console.log("===============================================================");
+
+function mapEmployeeToUpperCase(employee) {
+  employee.nome = employee.nome.toLocaleUpperCase();
+  return employee;
+}
+
+const mapEmployee = funcionarios.map(mapEmployeeToUpperCase);
+console.log("mapEmployee", mapEmployee);
+console.log("===============================================================");
